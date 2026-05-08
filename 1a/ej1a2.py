@@ -42,9 +42,20 @@ Exemple:
 '''
 
 def sum_odd_numbers(list_numbers):
-    # Write here your code
+    # Valiracion
+    for i in list_numbers:
+        if i < 0:
+            raise ValueError("El valor ha de ser major o igual que 0.")
+    
+
+    #Càlcul
+    valor = 0
+    for i in list_numbers:
+        if i % 2 != 0:
+            valor += i
+    return valor
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
+print(sum_odd_numbers([1, 2, 3, 4, 5, 10, 21, 100]))
