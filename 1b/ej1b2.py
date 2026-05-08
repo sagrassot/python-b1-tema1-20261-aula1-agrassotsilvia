@@ -66,9 +66,13 @@ Exemple:
 import math
 
 def calculate_angle(angle):
-    # Write here your code
+    # Retornem el valor del sinus de l'angle en dos decimals.
+    resultat = math.radians(angle)
+    resultat = math.sin(resultat)
+    resultat = round(resultat, 2)
+    return resultat
     pass
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script 
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# print(calculate_angle(270))
+print(calculate_angle(270))
