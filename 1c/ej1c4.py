@@ -41,14 +41,21 @@ Exemple:
 
 
 def is_palindrome(word):
-    # Write here your code
+    # Cas Base: Si la longitud es 0 o 1 sempre es capicua
+    if len(word) <= 1:
+        return True
+    # Rescursió: Si el primer i l'últim no són iguals, no es capicua
+    if word[0] != word[-1]:
+        return False
+    
+    return is_palindrome(word[1:-1])
     pass
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# word = "level"
-# print(f"Is '{word}' word palindrome?", is_palindrome(word))
+#word = "level"
+#print(f"Is '{word}' word palindrome?", is_palindrome(word))
 #
-# word = "juan"
-# print(f"Is '{word}' word palindrome?", is_palindrome(word))
+word = "juan"
+print(f"Is '{word}' word palindrome?", is_palindrome(word))
