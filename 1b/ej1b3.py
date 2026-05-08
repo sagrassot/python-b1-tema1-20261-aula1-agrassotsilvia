@@ -59,7 +59,7 @@ def line_graph(x, y):
 
     # Etiquetes dels eixos
     plt.xlabel("Axis X")
-    plt.ylabel("Axis I")
+    plt.ylabel("Axis Y")
 
     #Activem el grid
     plt.grid(True)
